@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    with open("heartRateEst/data.json", "r") as read_file:
+    with open("test.json", "r") as read_file:
         data = json.load(read_file)
         # img = io.BytesIO()
         # plt.plot(data["heartBeats"])
@@ -29,9 +29,11 @@ def index():
         return render_template("index.html", graph_data = graph_data)
     
 
-@app.route("/func")
-def func():
-    return '<h1>testo1</h1>'
+@app.route("/usrScreen")
+def usrScreen():
+    with open("test.json", "r") as read_file:
+        data = json.load(read_file)
+    return render_template("usrScreen.html", heartBeats = data["heartBeats"][-1])
 
 if __name__ == '__main__':
     app.run(debug=True)

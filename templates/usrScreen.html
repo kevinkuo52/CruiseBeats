@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block heading %} 
+    <meta content='2'; url=http://127.0.0.1:5000/usrScreen' http-equiv='refresh'>
+{% endblock %}
+
+{% block body %}
+    
+    {% if  heartBeats > 80 %}
+        <div>Pachelbel Canon in D</div>
+    {% else %}
+        <div>Nothing</div>
+
+    {% endif %}
+   
+
+{% endblock %}
