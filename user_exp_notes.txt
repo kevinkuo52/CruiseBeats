@@ -1,0 +1,29 @@
+Why - Motivations values
+What - functionality features
+How - accessibility aesthetics
+
+Minimal viable product = feasible -> valuable -> usable -> delightful (most important to least important)
+
+
+Shared, states product goals  -> team working on the same thing - similar goals. Would Cut development time
+
+
+1) Find target user base. Create personas (characters) that uses your product. 
+Include: Behavior patterns, goals, skills, attitudes, background information, environment
+
+2) Specify the context of use - what problems are you trying to solve? Who will use the product? What will people use it for? Under what conditions will people use your technology?
+
+3) Requirement - Tech requirements - what must be met for the product to function? User goals what must the user be able to do with your MVP?
+
+4) Prototype - build out a  rough concept, plan for feature interaction. Multiple prototype is great, each mmebers should be involved in the stage. Journey  map - when user start using your app till end goal of your program
+
+5) Evaluate design - benefit/drawbacks/technical challenges/time frame. Seek feedback - ask others for feedback, resolve comments. Divide up technical implementation.
+
+6) Begin development
+
+7) Evaluate often - are you making what to make? Will you system support the user's goals?
+
+
+invisionapp.com
+
+
