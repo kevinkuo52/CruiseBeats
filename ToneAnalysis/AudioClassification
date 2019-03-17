@@ -1,0 +1,37 @@
+
+def mtFeatureExtractionToFile(fileName, midTermSize, midTermStep, shortTermSize, shortTermStep, outPutFile,
+
+                             storeStFeatures=False, storeToCSV=False, PLOT=False):
+
+[fs, x] = audioBasicIO.readAudioFile('FirstHalfOfMoana.wav')
+
+x = audioBasicIO.stereo2mono(x)
+storeStFeatures = [mtF, stF, _]
+
+if storeStFeatures:[mtF, stF, _]
+
+[mtF, stF, _] = mtFeatureExtraction(x, fs,
+
+                                         round(fs * midTermSize),
+
+                                         round(fs * midTermStep),
+
+                                         round(fs * shortTermSize),
+
+                                         round(fs * shortTermStep))
+
+
+else:
+
+        [mtF, _, _] = mtFeatureExtraction(x, fs, round(fs*midTermSize),
+
+                                       round(fs * midTermStep),
+
+                                       round(fs * shortTermSize),
+
+                                       round(fs * shortTermStep))
+
+    # save mt features to numpy file
+
+numpy.save(outPutFile, mtF)
+#Doesn't work
