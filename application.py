@@ -6,19 +6,26 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    with open("test.json", "r") as read_file:
+    with open("heartRateEst/data.json", "r") as read_file:
         data = json.load(read_file)
-    # img = io.BytesIO()
-    # plt.plot(data["heartBeats"])
-    # plt.savefig(img, format='png')
-    #     # return data["heartBeats"]
-    # img.seek(0)
-    # plot_url = base64.b64encode(img.getvalue()).decode()
+        # img = io.BytesIO()
+        # plt.plot(data["heartBeats"])
+        # plt.savefig(img, format='png')
+        #     # return data["heartBeats"]
+        # img.seek(0)
+        # plot_url = base64.b64encode(img.getvalue()).decode()
         graph = pygal.Line()
         graph.title = '% Change Coolness of programming languages over time.'
-        graph.x_labels = ['1','2','3','4','5','6']
+        x_axies = []
+        print(len(data["heartBeats"]))
+        for index, hb in enumerate(range(len(data["heartBeats"]))): 
+            #print(hb)
+            x_axies.append(index)
+        #print("/n")
+        #print(x_axies)
+        graph.x_labels = x_axies
         graph.add('test',data["heartBeats"])
-        graph_data = graph.render_data_uri() 
+        graph_data = graph.render_data_uri()
         return render_template("index.html", graph_data = graph_data)
     
 
