@@ -5,18 +5,18 @@
 
 {% block body %}
     
-    {% if  heartBeats > 100 %}
+    {% if  heartBeats >= 100 %}
         <div>Pachelbel: Canon in D</div>
-        <img src="{{url_for('static', filename='meadow-2184989_1280.jpg')}}" width="1200" height="600">
-    {% elif heartBeats > 80 %}
+        <img src="{{url_for('static', filename='meadow.jpg')}}" width="1200" height="600">
+    {% elif (heartBeats < 100) and (heartBeats >= 80) %}
         <div>Rex Orange County: Loving is Easy  </div>
-        <img src="{{url_for('static', filename='maldives-1993704_1280.jpg')}}" width="1200" height="600">
-    {% elif heartBeats > 60 %}
+        <img src="{{url_for('static', filename='maldives.jpg')}}" width="1200" height="600">
+    {% elif (heartBeats < 80) and (heartBeats >= 60) %}
         <div> Torn - Natalie Imbruglia </div>
-        <img src="{{url_for('static', filename='images/ship-273622_1280.jpg')}}" width="1200" height="600">
+        <img src="{{url_for('static', filename='ship.jpg')}}" width="1200" height="600">
     {% else %}
         <div>Beethoven - Moonlight Sonata</div>
-        <img src="{{url_for('static', filename='images/bungee-jump-1655081_1280.jpg')}}" width="1200" height="600">
+        <img src="{{url_for('static', filename='pedestrians.jpg')}}" width="1200" height="600">
 
     {% endif %}
    
